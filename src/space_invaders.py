@@ -3,6 +3,11 @@ import sys
 
 # These import statements, and other statements as well,
 # start grayed-out because they are not YET used.
+from Badguy import Badguy
+from EnemyFleet import EnemyFleet
+from Fighter import Fighter
+from Missile import Missile
+
 
 def main():
     pygame.init()
