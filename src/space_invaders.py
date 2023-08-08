@@ -1,9 +1,8 @@
 import pygame
 import sys
 
-# TODO: when need import the fighter_missile_module
-# TODO: when need import the enemy_fleet_module
-
+# These import statements, and other statements as well,
+# start grayed-out because they are not YET used.
 
 def main():
     pygame.init()
@@ -13,16 +12,18 @@ def main():
 
     # TODO 9: Set    enemy_rows    to an initial value of 3.
     # TODO 10: Create an EnemyFleet object (called enemy_fleet) with the screen and enemy_rows
-    # TODO 1: Create a Fighter (called fighter)
+    # TODO 1: Create a Fighter (called fighter) at location   320, 590
 
     while True:
         clock.tick(60)
         for event in pygame.event.get():
+            pressed_keys = pygame.key.get_pressed()
             # TODO 5: If the event type is KEYDOWN and pressed_keys[pygame.K_SPACE] is True, then fire a missile
             if event.type == pygame.QUIT:
                 sys.exit()
 
         screen.fill((0, 0, 0))
+        pressed_keys = pygame.key.get_pressed()
         # TODO 3: If pygame.K_LEFT is pressed and move the fighter left 5 (i.e. -5)
         # TODO 4: If pygame.K_RIGHT is pressed and move the fighter right 5
         # TODO 2: Draw the fighter
@@ -34,7 +35,7 @@ def main():
         #   TODO 7: Move the missile
         #   TODO 8: Draw the missile
 
-        # TODO 12: For each badguy in the enemy_fleet.badguys list
+        # TODO 12.5: For each badguy in the enemy_fleet.badguys list
         #     TODO 13: For each missile in the fighter missiles
         #         TODO 14: If the badguy is hit by the missile
         #             TODO 15: Mark the badguy is_dead = True
